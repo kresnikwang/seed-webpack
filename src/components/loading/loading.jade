@@ -1,0 +1,10 @@
+#loading(ng-controller="LoadingController" ng-class="{'inactive': service.loaded}")
+
+  img.logo(src=require("src/components/assets/nike_logo.svg"))
+
+  .wrap(style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;")
+    .cta(ng-cloak) {{ "LOADING_CTA" | translate }}
+
+    img.preloader(src=require("./assets/preloader.gif") style="width: 40px; margin: 20px auto;")
+
+    .percent(ng-cloak) {{ Math.round(service.percent * 100) }}%

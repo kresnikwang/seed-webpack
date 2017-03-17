@@ -1,0 +1,19 @@
+doctype html
+
+html(ng-app="app")
+
+  head
+
+    meta(charset='utf-8')
+    meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width")
+    meta(property="og:image" content=require("./assets/icon.jpg"))
+
+    link(rel="icon" href=require("./assets/favicon.ico") type="image/x-icon")
+    link(href=require("./assets/icon.jpg") rel="apple-touch-icon")
+
+    title AKQA Seed
+
+    script(src=require("./components/analytics/ga.js"))
+
+  body(style="display:none;")
+    ui-view

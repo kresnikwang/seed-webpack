@@ -1,0 +1,58 @@
+
+@import './common'
+
+@font-face
+  font-family: "TradeGothic"
+  src: url("./assets/TradeGothicLTStd.otf") format("opentype")
+
+html, body
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  margin: 0px
+  font-family: $font
+  overflow: hidden
+
+*, *:before, *:after
+  box-sizing: border-box
+  user-select: none
+
+a
+  text-decoration: none
+  color: inherit
+
+ul, li
+  margin: 0
+  padding: 0
+  list-style: none
+
+h1, h2, h3, h4, p
+  margin: 0
+
+button, input
+  border: none
+  outline: none
+  appearance: none
+  padding: 0
+  margin: 0
+  background: none
+  font-family: $font
+
+
+ui-view
+  +fullscreen()
+
+  &.ng-enter, &.ng-leave
+    transition: 0.5s ease 0s
+
+
+.scrollable
+  +fullscreen()
+  overflow-x: hidden
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+
+  &::-webkit-scrollbar
+    display: none
